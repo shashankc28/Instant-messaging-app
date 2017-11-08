@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/deleteoption"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:iconTint="@color/colorAccent"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/app_bar_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        android:visible="true"
+        app:showAsAction="always"/>
+
+    <item android:title="Profile" />
+    <item android:title="New chat" />
+    <item android:title="Settings" />
+    <item
+        android:id="@+id/close"
+        android:title="SignOut" />
+</menu>

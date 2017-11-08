@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/lib/com.shashankchamoli.tango">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chatbg3"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/MyMaterialTheme.Base" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ListView
+            android:id="@+id/chatid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:smoothScrollbar="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@drawable/inputboxchat"
+                android:scrollbars="vertical"
+                android:hint="Write your message here "
+                android:cursorVisible="true"
+                android:inputType="textMultiLine"
+                android:minLines="1"
+                android:textColor="@android:color/black"
+                android:textStyle="normal" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                style="@android:style/Widget.Holo.ActionMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:padding="5dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:elevation="0dp"
+                android:focusable="auto"
+                android:nestedScrollingEnabled="true"
+                android:soundEffectsEnabled="true"
+                android:onClick="sendpressed"
+                app2:srcCompat="@drawable/send440" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
